@@ -55,6 +55,8 @@ const Card = () => {
             ref={cardRef} 
             className="card w-full sm:w-1/2 md:w-1/3 pb-10 pt-5 flex flex-col items-start gap-y-2 border px-3 bg-[#000] text-white "
             style={{ transform: "translate(0, 0)" }} // Asl holatga qaytish uchun
+            data-aos="zoom-in-up"
+            data-aos-duration="900"
         >
             <img src={logo} alt="" className="h-28 text-white" />
             <h2 className="text-white text-base md:text-xl">Yetkazib berish</h2>

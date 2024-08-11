@@ -29,7 +29,7 @@ export default function NavBar() {
             <div className="md:justify-between flex  mx-auto  md:items-center flex-col md:flex-row max-w-[1200px]  rounded-xl">
                 <div className="w-[100%] md:w-auto">
                     <div className="flex items-center justify-between  md:block">
-                        <a href="" className='flex items-center text-xl'>
+                        <a href="" className='flex items-center text-xl' data-aos="fade-right" data-aos-duration="1100">
                             <img src={logo} alt="qushxona.uz logo" className='h-16 nav-logo' />
                             Qushxona.uz
                         </a>
@@ -44,6 +44,8 @@ export default function NavBar() {
                                         className="w-6 h-6"
                                         viewBox="0 0 20 20"
                                         fill="currentColor"
+                                        data-aos-duration="500"
+                                        data-aos="fade-right"
                                     >
                                         <path
                                             fillRule="evenodd"
@@ -59,6 +61,8 @@ export default function NavBar() {
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
                                         strokeWidth={2}
+                                        data-aos="fade-right"
+                                        data-aos-duration="500"
                                     >
                                         <path
                                             strokeLinecap="round"
@@ -77,10 +81,10 @@ export default function NavBar() {
                             }`}
                     >
                         <ul className="items-start px-3 justify-start flex flex-col md:flex-row  md:flex md:space-x-6 text-xl font-[500] gap-4 bg-white h-[90svh] md:h-auto">
-                            <li onClick={() => setNavbar(false)}> <a href='#about' className='nav-links text-sm'>Biz haqimizda</a></li>
-                            <li onClick={() => setNavbar(false)}> <a href='#service' className='nav-links text-sm'>Hizmatlarimiz</a></li>
-                            <li onClick={() => setNavbar(false)}><a href='#delivery' className='nav-links text-sm'>Buyurtma</a></li>
-                            <li onClick={() => setNavbar(false)}><a href='#contact' className='nav-links text-sm'>Bog'lanish</a></li>
+                            <li onClick={() => setNavbar(false)} data-aos="fade-left" data-aos-duration="500"> <a href='#about' className='nav-links text-sm'>Biz haqimizda</a></li>
+                            <li onClick={() => setNavbar(false)} data-aos="fade-left" data-aos-duration="700"> <a href='#service' className='nav-links text-sm'>Hizmatlarimiz</a></li>
+                            <li onClick={() => setNavbar(false)} data-aos="fade-left" data-aos-duration="900"><a href='#delivery' className='nav-links text-sm'>Buyurtma</a></li>
+                            <li onClick={() => setNavbar(false)} data-aos="fade-left" data-aos-duration="1100"><a href='#contact' className='nav-links text-sm'>Bog'lanish</a></li>
                             
                         </ul>
                     </div>
