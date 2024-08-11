@@ -2,7 +2,7 @@
 
 const Contact = () => {
     return (
-        <section className=" text-black relative p-5 md:p-0 " id="contact">
+        <section className=" text-black relative p-5 md:p-0 pt-5 " id="contact">
             <action className="mx-auto max-w-[1200px] h-auto md:h-[90svh] flex flex-col md:flex-row py-16">
                 <div className="w-full md:w-1/2 h-full  flex flex-col justify-between ">
                     <h1 className="text-2xl md:text-3xl">#04 Biz bilan bog'lanish.</h1>
