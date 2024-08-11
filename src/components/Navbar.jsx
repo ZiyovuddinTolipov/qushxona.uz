@@ -25,8 +25,8 @@ export default function NavBar() {
         };
     }, []);
     return (
-        <nav className={`sticky top-0 shadow-md h-[10svh] z-50 ${hasShadow ? 'nav-shadow' : ''} navbar`} id='navbar navbar'>
-            <div className="md:justify-between flex  mx-auto  md:items-center flex-col md:flex-row max-w-[1400px]  rounded-xl">
+        <nav className={`sticky top-0 shadow-md  h-[10svh] z-50 ${hasShadow ? 'nav-shadow' : ''} navbar`} id='navbar navbar'>
+            <div className="md:justify-between flex  mx-auto  md:items-center flex-col md:flex-row max-w-[1200px]  rounded-xl">
                 <div className="w-[100%] md:w-auto">
                     <div className="flex items-center justify-between  md:block">
                         <a href="" className='flex items-center text-xl'>
@@ -79,7 +79,7 @@ export default function NavBar() {
                         <ul className="items-start px-3 justify-start flex flex-col md:flex-row  md:flex md:space-x-6 text-xl font-[500] gap-4 bg-white h-[90svh] md:h-auto">
                             <li onClick={() => setNavbar(false)}> <a href='#about' className='nav-links text-sm'>Biz haqimizda</a></li>
                             <li onClick={() => setNavbar(false)}> <a href='#service' className='nav-links text-sm'>Hizmatlarimiz</a></li>
-                            <li onClick={() => setNavbar(false)}><a href='#ads' className='nav-links text-sm'>Buyurtma</a></li>
+                            <li onClick={() => setNavbar(false)}><a href='#delivery' className='nav-links text-sm'>Buyurtma</a></li>
                             <li onClick={() => setNavbar(false)}><a href='#contact' className='nav-links text-sm'>Bog'lanish</a></li>
                             
                         </ul>

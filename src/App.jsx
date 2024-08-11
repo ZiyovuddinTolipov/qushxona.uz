@@ -1,7 +1,7 @@
 import Head from './components/Head'
 import Navbar from './components/Navbar'
 import Services from './components/Services'
-import Buyurtma from './components/Buyurtma'
+import Delivery from './components/Delivery'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 // import Scroll from './components/Scroll'
@@ -11,7 +11,7 @@ const App = () => {
       <Navbar />
       <Head />
       <Services />
-      <Buyurtma page="#3" />
+      <Delivery page="#3" />
       <Contact />
       <Footer />
     </div>

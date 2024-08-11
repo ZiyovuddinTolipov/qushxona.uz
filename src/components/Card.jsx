@@ -57,12 +57,12 @@ const Card = () => {
             style={{ transform: "translate(0, 0)" }} // Asl holatga qaytish uchun
         >
             <img src={logo} alt="" className="h-28 text-white" />
-            <h2 className="text-white">Yetkazib berish</h2>
+            <h2 className="text-white text-base md:text-xl">Yetkazib berish</h2>
             <p className="text-sm ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad repellat tempore
                 odit molestias quisquam corrupti, mollitia quidem quas dolorem!
             </p>
-            <button className="bg-[#fff] text-[#8d0b0d] px-4 py-2 mt-2 uppercase">Buyurtma</button>
+            <button className="bg-[#fff] text-[#8d0b0d] px-4 py-2 mt-2 uppercase text-base md:text-xl">Buyurtma</button>
         </div>
     );
 };
