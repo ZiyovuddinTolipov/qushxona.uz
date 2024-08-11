@@ -58,7 +58,7 @@ const Card = () => {
             data-aos="zoom-in-up"
             data-aos-duration="900"
         >
-            <img src={logo} alt="" className="h-28 text-white" />
+            <img src={logo} alt="" className="h-28 text-white" loading='lazy'/>
             <h2 className="text-white text-base md:text-xl">Yetkazib berish</h2>
             <p className="text-sm ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad repellat tempore

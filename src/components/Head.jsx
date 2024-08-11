@@ -13,7 +13,7 @@ const Head = () => {
           </div>
         </div>
         <div className='flex items-center justify-center px-5 mt-5 md:mt-0 md:p-10'>
-          <img src={img} alt="" className='h-[25  0px] md:h-[400px] w-full' data-aos="zoom-in" data-aos-duration="900" />
+          <img src={img} alt="" className='h-[25  0px] md:h-[400px] w-full' data-aos="zoom-in" data-aos-duration="900" loading='lazy' />
         </div>
       </action>
     </section>

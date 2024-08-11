@@ -30,7 +30,7 @@ export default function NavBar() {
                 <div className="w-[100%] md:w-auto">
                     <div className="flex items-center justify-between  md:block">
                         <a href="" className='flex items-center text-xl' data-aos="fade-right" data-aos-duration="1100">
-                            <img src={logo} alt="qushxona.uz logo" className='h-16 nav-logo' />
+                            <img src={logo} alt="qushxona.uz logo" className='h-16 nav-logo' loading='lazy'/>
                             Qushxona.uz
                         </a>
                         <div className="md:hidden">
