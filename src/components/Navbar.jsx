@@ -29,9 +29,9 @@ export default function NavBar() {
             <div className="md:justify-between flex  mx-auto  md:items-center flex-col md:flex-row max-w-[1200px]  rounded-xl">
                 <div className="w-[100%] md:w-auto">
                     <div className="flex items-center justify-between  md:block">
-                        <a href="" className='flex items-center text-xl' data-aos="fade-right" data-aos-duration="1100">
-                            <img src={logo} alt="qushxona.uz logo" className='h-16 nav-logo' loading='lazy'/>
-                            Qushxona.uz
+                        <a href="" className='flex items-center text-xl' >
+                            <img src={logo} alt="qushxona.uz logo" className='h-16 nav-logo' loading='lazy'  data-aos="fade-right" data-aos-duration="1100"/>
+                            <span  data-aos="fade-right" data-aos-duration="800">Qushxona.uz</span>
                         </a>
                         <div className="md:hidden">
                             <button
