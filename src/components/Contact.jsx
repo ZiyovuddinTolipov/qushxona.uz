@@ -13,6 +13,13 @@ const Contact = () => {
                             <img src={img} alt="" className="w-1/2 object-cover h-60" />
                             <img src={img} alt="" className="w-1/2 object-cover h-60" />
                         </div>
+                        <div className="mt-5">
+                            <h2 className="text-base md:text-xl"></h2>
+                            <div className="flex flex-col md:flex-row justify-between">
+                                <a className="text-red-500" href="tel:+998913269426">+998913269426</a>
+                                <a className="text-blue-500" href="mailto:ziyovuddinweb@gmail.com">ziyovuddinweb@gmail.com</a>
+                            </div>
+                        </div>
                         <h2 className="text-base md:text-xl mt-5">Bizni ijtimoiy tarmoqlarda kuzating</h2>
                         <div className="flex gap-x-2 mt-2 flex-row">
                             <p className="social-icons text-[.9rem] px-2 py-2 w-1/3"><FaTelegramPlane /> Telegram</p>
@@ -22,11 +29,11 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-1/2 h-full  flex flex-col justify-between '>
-                    <h2 className="text-xl">Bizning joylashuv</h2>
-                    <iframe 
-                    src="https://www.google.com/maps?q=41.361945,69.373126&z=16&output=embed" 
-                    className=" w-full h-full mt-5" 
-                    allowFullScreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    <h2 className="text-base md:text-xl">Bizning joylashuv</h2>
+                    <iframe
+                        src="https://www.google.com/maps?q=41.361945,69.373126&z=16&output=embed"
+                        className=" w-full h-full mt-5"
+                        allowFullScreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </action>
