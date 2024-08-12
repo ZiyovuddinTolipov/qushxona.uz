@@ -17,14 +17,14 @@ const Contact = () => {
                             <h2 className="text-base md:text-xl"></h2>
                             <div className="flex flex-col md:flex-row justify-between">
                                 <a className="text-black hover:underline transition-all duration-75" href="tel:+998913269426">+998913269426</a>
-                                <a className="text-black hover:underline transition-all duration-75" href="mailto:ziyovuddinweb@gmail.com">ziyovuddinweb@gmail.com</a>
+                                <a className="text-black hover:underline transition-all duration-75" href="mailto:info@qushxona.uz">info@qushxona.uz</a>
                             </div>
                         </div>
                         <h2 className="text-base md:text-xl mt-5" data-aos="fade-right" data-aos-duration="900">Bizni ijtimoiy tarmoqlarda kuzating</h2>
                         <div className="flex gap-x-2 mt-2 flex-row">
-                            <p className="social-icons text-[.9rem] px-2 py-2 w-1/3" data-aos="zoom-in" data-aos-duration="700"><FaTelegramPlane /> Telegram</p>
-                            <p className="social-icons text-[.9rem] px-2 py-2 w-1/3" data-aos="zoom-in" data-aos-duration="700"><FaInstagram /> Instagram</p>
-                            <p className="social-icons text-[.9rem] px-2 py-2 w-1/3" data-aos="zoom-in" data-aos-duration="700"><FaWhatsapp /> Whatsapp</p>
+                            <p className="social-icons text-xs md:text-[.9rem] px-2 py-2 w-1/3" data-aos="zoom-in" data-aos-duration="700"><FaTelegramPlane /> Telegram</p>
+                            <p className="social-icons text-xs md:text-[.9rem] px-2 py-2 w-1/3" data-aos="zoom-in" data-aos-duration="700"><FaInstagram /> Instagram</p>
+                            <p className="social-icons text-xs md:text-[.9rem] px-2 py-2 w-1/3" data-aos="zoom-in" data-aos-duration="700"><FaWhatsapp /> Whatsapp</p>
                         </div>
                     </div>
                 </div>
