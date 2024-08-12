@@ -3,19 +3,19 @@
 
 const Delivery = (props) => {
     return (
-        <div className=" h-auto md:h-52 bg-[#8d0b0d] text-white mt-10 md:mt-0 p-5 md:p-0" id="delivery">
+        <div className=" h-auto md:h-52 bg-[#8d0b0d] text-white mt-10 md:mt-0 p-5 md:p-0 overflow-x-hidden max-w-full" id="delivery">
             <div className="mx-auto max-w-[1200px]">
-                <h2 className=" text-2xl md:text-3xl py-5" data-aos="fade-right">{props.page} Buyurtma berish.</h2>
-                <form className="flex flex-col md:flex-row  gap-3 md:items-end w-full items-start">
-                    <div className="flex flex-col max-w-sm text-black gap-y-1" data-aos="fade-right" data-aos-duration="900">
+                <h2 className="text-2xl md:text-3xl py-5" data-aos="fade-right">{props.page} Buyurtma berish.</h2>
+                <form className="flex flex-col md:flex-row  gap-3 md:items-end items-start w-[100%]">
+                    <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="fade-right" data-aos-duration="900">
                         <label htmlFor="name" className="text-white max-w-sm">Ismingiz</label>
                         <input type="text" className="focus:outline-none px-3 py-2" />
                     </div>
-                    <div className="flex flex-col max-w-sm text-black gap-y-1" data-aos="fade-up-right" data-aos-duration="900">
+                    <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="fade-up-right" data-aos-duration="900">
                         <label htmlFor="name" className="text-white max-w-sm">Telefon raqamingiz</label>
                         <input type="text" className="focus:outline-none px-3 py-2" />
                     </div>
-                    <div className="flex flex-col max-w-sm text-black gap-y-1" data-aos="fade-up-left" data-aos-duration="900">
+                    <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="fade-up-left" data-aos-duration="900">
                         <label htmlFor="name" className="text-white max-w-sm">Qo'shimcha</label>
                         <input type="text" className="focus:outline-none px-3 py-2" />
                     </div>
