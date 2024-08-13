@@ -36,7 +36,7 @@ export default function NavBar() {
                     <div
                         className="flex-1 justify-self-center pb-3  md:block md:pb-0 md:mt-0 bg-[#F9F0E7] "
                     >
-                        <ul className="flex px-5 justify-between text-xl font-medium uppercase">
+                        <ul className="flex px-5 justify-between text-base md:text-xl font-medium uppercase">
                             <li data-aos="fade-left" data-aos-duration="700"> <a href='#service' className='nav-links'>xizmatlarimiz</a></li>
                             <li data-aos="fade-left" data-aos-duration="900"><a href='#delivery' className='nav-links'>Buyurtma</a></li>
                             <li data-aos="fade-left" data-aos-duration="1100"><a href='#contact' className='nav-links'>Bog'lanish</a></li>

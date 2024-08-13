@@ -1,4 +1,3 @@
-import img from '../assets/bg.jpg'
 import { CiCircleCheck } from "react-icons/ci";
 const Head = () => {
   return (
