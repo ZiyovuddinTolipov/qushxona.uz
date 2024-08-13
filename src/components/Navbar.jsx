@@ -32,7 +32,7 @@ export default function NavBar() {
                         
                     </div>
                 </div>
-                <div className="w-[100%] md:w-auto">
+                <div className="w-[100%] md:w-auto border-t pt-2 border-t-black md:border-t-0">
                     <div
                         className="flex-1 justify-self-center pb-3  md:block md:pb-0 md:mt-0 bg-[#F9F0E7] "
                     >
