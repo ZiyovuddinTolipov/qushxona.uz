@@ -9,7 +9,8 @@ const Head = () => {
             <ul className='mt-5 text-xl'>
               <li ><CiCircleCheck className='inline' /> Aqiqa</li>
               <li ><CiCircleCheck className='inline' /> Maraka</li>
-              <li ><CiCircleCheck className='inline' /> To’y hasham uchun qurbonlik xizmati!</li>
+              <li ><CiCircleCheck className='inline' /> To’y hasham</li>
+              <li ><CiCircleCheck className='inline' /> Qurbonlik xizmati</li>
             </ul>
           </div>
         </div>
