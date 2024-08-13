@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "Monument Extended", sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
@@ -41,8 +41,7 @@ body {
 }
 
 .head-section {
-  position: relative;
-  overflow: hidden;
+ 
 }
 
 .video-background {
@@ -94,12 +93,12 @@ body {
  
 .nav-shadow {
   transition: all ease-in 0.2s;
-  box-shadow: 0 10px 18px rgb(255, 255, 255);
+  box-shadow: 0 10px 18px #F9F0E7;
   border-bottom: 2px solid #000000;
 }
 .navbar {
-  background: white;
-  mix-blend-mode: hard-light;
+  background: #F9F0E7;
+  // mix-blend-mode: hard-l ight;
 }
 h4 {
   // background: #f50000;
@@ -114,20 +113,19 @@ h4 {
     margin-right: 0.5rem;
     font-size: 1.2rem;
   }
-  &:nth-child(1):hover {
+  &:nth-child(1) {
     color: blue;
     border-color: blue;
   }
-  &:nth-child(2):hover {
+  &:nth-child(2) {
     color: red;
     border-color: red;
   }
-  &:nth-child(3):hover {
+  &:nth-child(3) {
     color: green;
     border-color: green;
   }
   &:hover {
-    border: 2px dashed;
     transition: all ease-in 0.2s;
   }
 }
@@ -141,10 +139,10 @@ h4 {
     }
   }
 }
-iframe {
-  filter: grayscale(1);
-  &:hover {
-    filter: none;
-    transition: all ease-in 0.4s;
-  }
-}
+// iframe {
+//   filter: grayscale(1);
+//   &:hover {
+//     filter: none;
+//     transition: all ease-in 0.4s;
+//   }
+// }

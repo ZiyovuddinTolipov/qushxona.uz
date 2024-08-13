@@ -2,9 +2,8 @@
 import Card from './Card'
 const Services = () => {
     return (
-        <section className=" bg-white border-t-4 border-t-[#000] px-5 md:px-0" id='service'>
+        <section className=" bg-[#F9F0E7] border-t-4 border-t-[#000] px-5 md:px-0" id='service'>
             <div className="max-w-[1200px] h-auto md:h-[90svh] mx-auto pt-16">
-                <h1 className="text-2xl md:text-3xl ">#02 Bizning hizmatlarimiz.</h1>
                 <div className='flex flex-col md:flex-row mt-10  justify-between gap-3 px-0 md:px-5'>
                 <Card aos="1100"/>
                 <Card aos="900"/>

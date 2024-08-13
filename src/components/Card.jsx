@@ -5,11 +5,11 @@ import logo from '../assets/delivery.png';
 const Card = (props) => {
     return (
         <div 
-            className="card w-full sm:w-1/2 md:w-1/3 pb-10 pt-5 flex flex-col items-start gap-y-2 border px-3 bg-[#000] text-white "
+            className="card w-full sm:w-1/2 md:w-1/3 pb-10 pt-5 flex flex-col items-start gap-y-2 border px-3 bg-[#fff] text-red-500 "
             data-aos="zoom-in"
             data-aos-duration='900'
         >
-            <img src={logo} alt="" className="h-28 text-white" loading='lazy'/>
+            <img src={logo} alt="" className="h-28" loading='lazy'/>
             <h2 className="text-white text-base md:text-xl">Yetkazib berish</h2>
             <p className="text-sm ">
                 Biz sizga 1 yoshdan oshgan
