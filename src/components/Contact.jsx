@@ -9,7 +9,7 @@ import qassobLogo from '../assets/qassob2.svg'
 const Contact = () => {
     return (
         <section className=" text-black relative p-5 md:p-0 pt-5 " id="contact">
-            <action className="mx-auto max-w-[1200px] h-auto md:h-[90svh] flex flex-col md:flex-row py-16 gap-5">
+            <action className="mx-auto max-w-[1200px] h-auto md:h-[70svh] flex flex-col md:flex-row py-16 gap-5">
                 <div className="w-full md:w-1/2 h-full  flex flex-col justify-between ">
                     <div className=' mt-2 w-full'>
                         <div className="flex flex-col justify-between gap-y-2 font-medium">
@@ -32,7 +32,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-full md:w-1/2 h-full  flex flex-col justify-between '>
+                <div className='w-full md:w-1/2 max-h-[500px] flex flex-col justify-between '>
                     <h2 className="text-xl font-medium" data-aos="zoom-in" data-aos-duration="900">Bizning joylashuv.</h2>
                     <iframe
                         data-aos="zoom-in" data-aos-duration="1100"

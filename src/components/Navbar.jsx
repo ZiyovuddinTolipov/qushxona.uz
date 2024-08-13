@@ -29,20 +29,16 @@ export default function NavBar() {
                             <img src={logo} alt="qushxona.uz logo" className='h-16 nav-logo' loading='lazy' />
                             <span  >Qushxona.uz</span>
                         </a>
-                        
+
                     </div>
                 </div>
-                <div className="w-[100%] md:w-auto border-t pt-2 border-t-black md:border-t-0">
-                    <div
-                        className="flex-1 justify-self-center pb-3  md:block md:pb-0 md:mt-0 bg-[#F9F0E7] "
-                    >
-                        <ul className="flex px-5 justify-between text-base md:text-xl font-medium uppercase pr-5">
-                            <li  className="border-r-2 md:border-0 border-[#8d0b0d] pr-5" > <a href='#service' className='nav-links'>xizmatlarimiz</a></li>
-                            <li  className="border-r-2 md:border-0 border-[#8d0b0d] pr-5"><a href='#delivery' className='nav-links'>Buyurtma</a></li>
-                            <li ><a href='#contact' className='nav-links'>Bog'lanish</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+                <ul className="flex px-5 justify-between text-base md:text-xl font-medium uppercase pr-5 bg-[#F9F0E7] border-t border-t-[#8d0b0d] md:border-t-0">
+                    <li className="border-r-2 md:border-0 border-[#8d0b0d] pr-5 py-3" > <a href='#service' className='nav-links'>xizmatlarimiz</a></li>
+                    <li className="border-r-2 md:border-0 border-[#8d0b0d] pr-5 py-3"><a href='#delivery' className='nav-links'>Buyurtma</a></li>
+                    <li className='pr-5 py-3'><a href='#contact' className='nav-links'>Bog'lanish</a></li>
+                </ul>
+
             </div>
         </nav>
     );
