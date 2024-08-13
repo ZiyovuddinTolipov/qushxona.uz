@@ -3,7 +3,7 @@
 
 const Delivery = () => {
     return (
-        <div className=" h-auto md:h-40 bg-[#8d0b0d] text-white mt-10 md:mt-0 p-5 md:p-0 overflow-x-hidden max-w-full" id="delivery">
+        <div className=" h-auto md:h-40 bg-slate-900 text-white mt-10 md:mt-0 p-5 md:p-0 overflow-x-hidden max-w-full" id="delivery">
             <div className="mx-auto max-w-[1200px] pt-5">
                 <form className="flex flex-col md:flex-row  gap-3 md:items-end items-start w-[100%]">
                     <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">

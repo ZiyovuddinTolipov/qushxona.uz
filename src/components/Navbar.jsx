@@ -26,8 +26,8 @@ export default function NavBar() {
                 <div className="w-[100%] md:w-auto">
                     <div className="flex items-center justify-center  md:block">
                         <a href="" className='flex items-center text-2xl text-[#8d0b0d] font-semibold uppercase' >
-                            <img src={logo} alt="qushxona.uz logo" className='h-16 nav-logo' loading='lazy'  data-aos="fade-right" data-aos-duration="1100"/>
-                            <span  data-aos="fade-right" data-aos-duration="800">Qushxona.uz</span>
+                            <img src={logo} alt="qushxona.uz logo" className='h-16 nav-logo' loading='lazy' />
+                            <span  >Qushxona.uz</span>
                         </a>
                         
                     </div>
@@ -36,10 +36,10 @@ export default function NavBar() {
                     <div
                         className="flex-1 justify-self-center pb-3  md:block md:pb-0 md:mt-0 bg-[#F9F0E7] "
                     >
-                        <ul className="flex px-5 justify-between text-base md:text-xl font-medium uppercase">
-                            <li data-aos="fade-left" data-aos-duration="700"> <a href='#service' className='nav-links'>xizmatlarimiz</a></li>
-                            <li data-aos="fade-left" data-aos-duration="900"><a href='#delivery' className='nav-links'>Buyurtma</a></li>
-                            <li data-aos="fade-left" data-aos-duration="1100"><a href='#contact' className='nav-links'>Bog'lanish</a></li>
+                        <ul className="flex px-5 justify-between text-base md:text-xl font-medium uppercase pr-5">
+                            <li  className="border-r-2 md:border-0 border-[#8d0b0d] pr-5" > <a href='#service' className='nav-links'>xizmatlarimiz</a></li>
+                            <li  className="border-r-2 md:border-0 border-[#8d0b0d] pr-5"><a href='#delivery' className='nav-links'>Buyurtma</a></li>
+                            <li ><a href='#contact' className='nav-links'>Bog'lanish</a></li>
                         </ul>
                     </div>
                 </div>
