@@ -20,7 +20,7 @@ const Delivery = () => {
         const message = `Ism: ${name}\nTelefon: ${phone}\nQo'shimcha: ${additional}`;
 
         try {
-            console.log(message);
+            // console.log(message) ;
             const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
                 method: 'POST',
                 headers: {
@@ -42,7 +42,7 @@ const Delivery = () => {
                 toast.error('Ma\'lumotlarni yuborishda xatolik yuz berdi.');
             }
         } catch (error) {
-            console.error('Xatolik:', error);
+            // console.error('Xatolik:', error);
             toast.error('Ma\'lumotlarni yuborishda xatolik yuz berdi.');
         }
 
