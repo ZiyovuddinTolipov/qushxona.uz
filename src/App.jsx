@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from "@vercel/analytics/react"
 // import Scroll from './components/Scroll'
 const App = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const App = () => {
       <Delivery page="#3" />
       <Contact />
       <Footer />
+      <Analytics />
     </>
   )
 }
