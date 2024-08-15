@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
-import logo from "../assets/delivery-man.png";
+import delivery from "../assets/delivery.png";
+import truck from "../assets/3d-truck.png"
+import meat from "../assets/meat.png"
 const Services = () => {
     return (
         <section
@@ -9,66 +11,144 @@ const Services = () => {
         >
             <div className="max-w-[1200px] h-auto  mx-auto pt-16">
                 <div className="flex flex-col md:flex-row py-10  justify-between gap-3 px-0 md:px-5">
-                    <div
-                        className="card w-full sm:w-1/2 md:w-1/3 pb-20 p-5 flex flex-col items-start gap-y-2 px-5 bg-[#fff] text-gray-900 border border-gray-900 hover:scale-x-110 transition relative"
-                        data-aos="zoom-in"
-                        data-aos-duration="900"
-                    >
-                        <img src={logo} alt="" className="h-28" loading="lazy" />
-                        <h2 className="text-white text-base md:text-xl">Yetkazib berish</h2>
-                        <p className="text-base ">
-                            Sifatli qo'ylarni <b className="text-[#8d0b0d]">20-55 kg</b>{" "}
-                            oralig'ida <b className="text-[#8d0b0d]">bepul</b> yetkazib
-                            beramiz. Sizning qulayligingiz uchun maxsus xizmat ko'rsatamiz,
-                            eng yaxshi narxlarda taklif qilamiz.
-                        </p>
-                        <a
-                            href="#delivery"
-                            className="bg-gray-900 text-[#fff] px-4 py-2 mt-2 uppercase text-base md:text-xl absolute bottom-3 left-3"
-                        >
-                            Buyurtma
-                        </a>
+
+                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full md:w-1/3">
+                        <p className="text-sm text-black mb-3">Qushxona Express</p>
+                        <div className="relative z-20">
+                            <h4 className="font-semibold text-2xl font-heading mb-9 text-black">
+                                Yetkazib berish
+                            </h4>
+                            <div
+                                className="flex items-center gap-2 text-lg text-primary uppercase"
+                                tabIndex={0}
+                            >
+                                <span>Batafsil</span>{" "}
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    height="1em"
+                                    width="1em"
+                                    data-icon="arrow-right"
+                                    className="h-6 w-6"
+                                >
+                                    <use href="#ai:local:arrow-right" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 absolute bottom-8 left-6 md:bottom-11 md:left-9 z-20" />
+                        <figure className="w-full absolute -bottom-16 h-[80%] lg:max-w-[320px] max-w-[80%] right-0 select-none">
+                            <span className="relative w-full block before:absolute before:bg-[#8d0b0d76] before:blur-[100px] before:h-[200px] before:left-[50px] before:top-[50px] before:w-[200px]" />
+                            <picture>
+                                <source
+                                    srcSet={`${truck} 100w,  ${truck} 150w,  ${truck} 200w`}
+                                    sizes="(min-width: 480px, min-width: 640px, min-width: 768px, min-width: 1024px, min-width: 1280px)"
+                                    type="image/webp"
+                                />
+                                <img
+                                    alt="Computer Vision"
+                                    src={truck}
+                                    loading="lazy"
+                                    className="relative z-10"
+                                    height="200"
+                                    width="200"
+                                    decoding="async"
+                                    sizes="(min-width: 480px, min-width: 640px, min-width: 768px, min-width: 1024px, min-width: 1280px)"
+                                    srcSet={`${truck} 150w,  ${truck} 200w,  ${truck} 320w`}
+                                />
+                            </picture>
+                        </figure>
                     </div>
-                    <div
-                        className="card w-full sm:w-1/2 md:w-1/3 pb-20 p-5 flex flex-col items-start gap-y-2 px-5 bg-[#fff] text-gray-900 border border-gray-900 hover:scale-x-110 transition relative"
-                        data-aos="zoom-in"
-                        data-aos-duration="900"
-                    >
-                        <img src={logo} alt="" className="h-28" loading="lazy" />
-                        <h2 className="text-white text-base md:text-xl">So'yib berish</h2>
-                        <p className="text-base ">
-                            Professional ustalarimiz qo'ylarni{" "}
-                            <b className="text-[#8d0b0d]">Shariat va gigiyena</b> talablariga
-                            muvofiq <b className="text-[#8d0b0d]">halol</b> ravishda
-                            so'yishadi. Har bir jarayonda <b className='text-[#8d0b0d]'>sifat va sanitariya</b> standartlariga
-                            qat'iy rioya qilinadi.
-                        </p>
-                        <a
-                            href="#delivery"
-                            className="bg-gray-900 text-[#fff] px-4 py-2 mt-2 uppercase text-base md:text-xl absolute bottom-3 left-3"
-                        >
-                            Buyurtma
-                        </a>
+                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full md:w-1/3">
+                        <p className="text-sm text-black mb-3">Qassoblik hizmati</p>
+                        <div className="relative z-20">
+                            <h4 className="font-semibold text-2xl font-heading mb-9 text-black">
+                                So'yib berish
+                            </h4>
+                            <div
+                                className="flex items-center gap-2 text-lg text-primary uppercase"
+                                tabIndex={0}
+                            >
+                                <span>Batafsil</span>{" "}
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    height="1em"
+                                    width="1em"
+                                    data-icon="arrow-right"
+                                    className="h-6 w-6"
+                                >
+                                    <use href="#ai:local:arrow-right" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 absolute bottom-8 left-6 md:bottom-11 md:left-9 z-20" />
+                        <figure className="w-full absolute -bottom-16 h-[80%] lg:max-w-[320px] max-w-[80%] right-0 select-none">
+                            <span className="relative w-full block before:absolute before:bg-[#8d0b0d76] before:blur-[100px] before:h-[200px] before:left-[50px] before:top-[50px] before:w-[200px]" />
+                            <picture>
+                                <source
+                                    srcSet={`${meat} 150w,  ${meat} 200w,  ${meat} 320w`}
+                                    sizes="(min-width: 480px, min-width: 640px, min-width: 768px, min-width: 1024px, min-width: 1280px)"
+                                    type="image/webp"
+                                />
+                                <img
+                                    alt="Computer Vision"
+                                    src={meat}
+                                    loading="lazy"
+                                    className="relative z-10"
+                                    height="200"
+                                    width="200"
+                                    decoding="async"
+                                    sizes="(min-width: 480px, min-width: 640px, min-width: 768px, min-width: 1024px, min-width: 1280px)"
+                                    srcSet={`${meat} 150w,  ${meat} 200w,  ${meat} 320w`}
+                                />
+                            </picture>
+                        </figure>
                     </div>
-                    <div
-                        className="card w-full sm:w-1/2 md:w-1/3 pb-20 p-5 flex flex-col items-start gap-y-2 px-5 bg-[#fff] text-gray-900 border border-gray-900 hover:scale-x-110 transition relative"
-                        data-aos="zoom-in"
-                        data-aos-duration="900"
-                    >
-                        <img src={logo} alt="" className="h-28" loading="lazy" />
-                        <h2 className="text-white text-base md:text-xl">Pishirib berish</h2>
-                        <p className="text-base">
-                        <b className='text-[#8d0b0d]'>An'anaviy retsept</b>lar asosida kalla pochasi va hasplar
-                            tayyorlaymiz. Bizning taomlar bayramlarda va tadbirlarda
-                            mehmonlaringizni xursand qilish uchun ideal tanlovdir.
-                        </p>
-                        <a
-                            href="#delivery"
-                            className="bg-gray-900 text-[#fff] px-4 py-2 mt-2 uppercase text-base md:text-xl absolute bottom-3 left-3"
-                        >
-                            Buyurtma
-                        </a>
+                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full md:w-1/3">
+                        <p className="text-sm text-black mb-3">Qushxona.uz</p>
+                        <div className="relative z-20">
+                            <h4 className="font-semibold text-2xl font-heading mb-9 text-black">
+                                Pishirib berish.
+                            </h4>
+                            <div
+                                className="flex items-center gap-2 text-lg text-primary uppercase"
+                                tabIndex={0}
+                            >
+                                <span>Batafsil</span>{" "}
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    height="1em"
+                                    width="1em"
+                                    data-icon="arrow-right"
+                                    className="h-6 w-6"
+                                >
+                                    <use href="#ai:local:arrow-right" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 absolute bottom-8 left-6 md:bottom-11 md:left-9 z-20" />
+                        <figure className="w-full absolute -bottom-4 h-[80%] lg:max-w-[320px] max-w-[80%] right-0 select-none">
+                            <span className="relative w-full block before:absolute before:bg-[#8d0b0d76] before:blur-[100px] before:h-[200px] before:left-[50px] before:top-[50px] before:w-[200px]" />
+                            <picture>
+                                <source
+                                    srcSet={`${delivery} 150w,  ${delivery} 200w,  ${delivery} 320w`}
+                                    sizes="(min-width: 480px, min-width: 640px, min-width: 768px, min-width: 1024px, min-width: 1280px)"
+                                    type="image/webp"
+                                />
+                                <img
+                                    alt="Qushxona.uz pishirib berish xizmati"
+                                    src=" ${delivery}"
+                                    loading="lazy"
+                                    className="relative z-10"
+                                    height="1080"
+                                    width="1080"
+                                    decoding="async"
+                                    sizes="(min-width: 480px, min-width: 640px, min-width: 768px, min-width: 1024px, min-width: 1280px)"
+                                    srcSet={`${delivery} 150w,  ${delivery} 200w,  ${delivery} 320w`}
+                                />
+                            </picture>
+                        </figure>
                     </div>
+
+
                 </div>
             </div>
         </section>

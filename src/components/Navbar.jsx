@@ -16,7 +16,7 @@ export default function NavBar() {
 
     return (
         <nav 
-            className={`sticky top-0 z-50 h-[10svh] ${hasShadow ? 'shadow-md' : ''} navbar`} 
+            className={`sticky top-0 z-50 h-[10svh] ${hasShadow ? 'nav-shadow' : ''} navbar`} 
             id="navbar"
         >
             <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row md:justify-between md:items-center rounded-xl">

@@ -13,10 +13,10 @@ import { Analytics } from "@vercel/analytics/react"
 const App = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
-}, []);
+  }, []);
   return (
     <>
-       <Toaster position="top-right" reverseOrder={false} />
+      <Toaster position="top-right" reverseOrder={false} />
       <Navbar />
       <Head />
       <Services />

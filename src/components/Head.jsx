@@ -21,7 +21,7 @@ const Head = () => {
 
   return (
     <section
-      className="h-auto md:h-[90svh] text-white head-section relative pt-10 bg-gray-950"
+      className="h-auto md:h-[90svh] text-white head-section relative pt-10 bg-gray-950 overflow-hidden"
       id="about"
     >
       <div className="content mx-auto max-w-[1200px] min-h-[70svh] md:h-[100svh] flex flex-row relative px-5">
