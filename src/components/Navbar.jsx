@@ -33,13 +33,13 @@ export default function NavBar() {
                 </div>
 
                 <ul className="flex justify-around text-base md:text-xl font-medium uppercase bg-[#F9F0E7] border-t border-[#8d0b0d] md:border-t-0 text-[#8d0b0d]">
-                    <li className="px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d]">
+                    <li className="px-2 md:px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d]">
                         <a href="#service" className="nav-links">Xizmatlarimiz</a>
                     </li>
-                    <li className="px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d]">
+                    <li className="px-2 md:px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d]">
                         <a href="#delivery" className="nav-links">Buyurtma</a>
                     </li>
-                    <li className="px-5 py-3">
+                    <li className="px-2 md:px-5 py-3">
                         <a href="#contact" className="nav-links">Bog'lanish</a>
                     </li>
                 </ul>
