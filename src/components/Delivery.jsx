@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { useState } from 'react';
-import toast from 'react-hot-toast';
+import {toast} from 'react-hot-toast';
 import InputMask from 'react-input-mask';
 
 const Delivery = () => {
@@ -31,7 +31,6 @@ const Delivery = () => {
                     text: message
                 }),
             });
-
             if (response.ok) {
                 toast.success('Ma\'lumotlar yuborildi!');
                 // Formani tozalash

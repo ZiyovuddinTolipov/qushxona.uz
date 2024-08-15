@@ -7,20 +7,22 @@ import Delivery from './components/Delivery'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
 // import Scroll from './components/Scroll'
 const App = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
 }, []);
   return (
-    <div>
+    <>
+       <Toaster position="top-right" reverseOrder={false} />
       <Navbar />
       <Head />
       <Services />
       <Delivery page="#3" />
       <Contact />
       <Footer />
-    </div>
+    </>
   )
 }
 

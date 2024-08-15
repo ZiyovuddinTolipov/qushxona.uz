@@ -15,7 +15,7 @@ const Head = () => {
           </div>
         </div>
         <div className='flex items-center justify-center  w-1/2'>
-          {/* <video className="max-h-[500px]" src="https://www.dropbox.com/scl/fi/dlfgbncqr8pwf1hmod69a/qushxona.uz-20240814-0004.mp4?rlkey=jh3j8eyei9nxffsmt2boeb9uw&dl=1" autoPlay controls></video> */}
+          <video className="max-h-[500px]" src="https://www.dropbox.com/scl/fi/dlfgbncqr8pwf1hmod69a/qushxona.uz-20240814-0004.mp4?rlkey=jh3j8eyei9nxffsmt2boeb9uw&dl=1" autoPlay controls></video>
         </div>
       </div>
     </section>
