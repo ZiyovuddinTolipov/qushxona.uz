@@ -1,4 +1,6 @@
 import { CiCircleCheck } from "react-icons/ci";
+import video480 from "../assets/head480.mp4";
+import video720 from "../assets/head720.mp4";
 
 const services = [
   "Aqiqa",
@@ -8,6 +10,15 @@ const services = [
 ];
 
 const Head = () => {
+  // Determine which video source to use based on connection quality
+  const getVideoSource = () => {
+    if (navigator.connection) {
+      const { effectiveType } = navigator.connection;
+      return effectiveType === "4g" ? video720 : video480;
+    }
+    return video480; // Default to 480p if connection info is unavailable
+  };
+
   return (
     <section
       className="h-auto md:h-[90svh] text-white head-section relative pt-10 bg-gray-950"
@@ -34,10 +45,7 @@ const Head = () => {
         </div>
         <div className="flex items-center justify-center w-1/2">
           <video className="max-h-[400px] h-full w-[300px]" controls>
-            <source
-              src="https://www.dropbox.com/scl/fi/t4t43kqtwc3knjiqqt34u/qushxona.uz-20240814-0003.mp4?rlkey=6lmzu16izpm9qwolrwxzxvfxp&st=u818syax&dl=1"
-              type="video/mp4"
-            />
+            <source src={getVideoSource()} type="video/mp4" />
             <track
               kind="captions"
               srcLang="uz" // Change this to the appropriate language code

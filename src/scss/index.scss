@@ -1,0 +1,145 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Monument Extended";
+  src: url("./fonts/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8d0b0d;
+  // border-radius: 20px;
+  // border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+}
+@media all and (max-width: 600px) {
+  .vid-info {
+    width: 50%;
+    padding: 0.5rem;
+  }
+  .vid-info h1 {
+    margin-bottom: 0.2rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .vid-info .acronym {
+    display: none;
+  }
+}
+
+ 
+.nav-shadow {
+  transition: all ease-in 0.2s;
+  box-shadow: 0 10px 18px #F9F0E7;
+  // border-bottom: 2px solid #000000;
+}
+.navbar {
+  background: #F9F0E7;
+  // mix-blend-mode: hard-l ight;
+}
+h4 {
+  // background: #f50000;
+  mix-blend-mode: difference;
+}
+.social-icons {
+  cursor: pointer;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  &:nth-child(1) {
+    color: blue;
+    border-color: blue;
+  }
+  &:nth-child(2) {
+    color: red;
+    border-color: red;
+  }
+  &:nth-child(3) {
+    color: green;
+    border-color: green;
+  }
+  &:hover {
+    transition: all ease-in 0.2s;
+  }
+}
+
+.galery {
+  img {
+    filter: grayscale(0.8);
+    &:hover {
+      filter: none;
+      transition: all ease-in 0.4s;
+    }
+  }
+}
+// iframe {
+//   filter: grayscale(1);
+//   &:hover {
+//     filter: none;
+//     transition: all ease-in 0.4s;
+//   }
+// }
