@@ -33,8 +33,17 @@ const Head = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-1/2">
-          <video  className="max-h-[400px] h-full w-[300px]" controls>
-            <source src="https://www.dropbox.com/scl/fi/t4t43kqtwc3knjiqqt34u/qushxona.uz-20240814-0003.mp4?rlkey=6lmzu16izpm9qwolrwxzxvfxp&st=u818syax&dl=1" type="video/mp4" />
+          <video className="max-h-[400px] h-full w-[300px]" controls>
+            <source
+              src="https://www.dropbox.com/scl/fi/t4t43kqtwc3knjiqqt34u/qushxona.uz-20240814-0003.mp4?rlkey=6lmzu16izpm9qwolrwxzxvfxp&st=u818syax&dl=1"
+              type="video/mp4"
+            />
+            <track
+              kind="captions"
+              srcLang="uz" // Change this to the appropriate language code
+              src="path/to/captions.vtt" // Provide the path to your VTT file
+              label="O'zbekcha" // Change the label as needed
+            />
             Your browser does not support the video tag.
           </video>
         </div>
