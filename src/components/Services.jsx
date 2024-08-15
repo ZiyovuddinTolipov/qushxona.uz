@@ -12,7 +12,8 @@ const Services = () => {
             <div className="max-w-[1200px] h-auto  mx-auto pt-16">
                 <div className="flex flex-col md:flex-row py-10  justify-between gap-3 px-0 md:px-5">
 
-                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full md:w-1/3">
+                    <a id="delivery" className="w-full md:w-1/3">
+                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full ">
                         <p className="text-sm text-black mb-3">Qushxona Express</p>
                         <div className="relative z-20">
                             <h4 className="font-semibold text-2xl font-heading mb-9 text-black">
@@ -22,7 +23,7 @@ const Services = () => {
                                 className="flex items-center gap-2 text-lg text-primary uppercase"
                                 tabIndex={0}
                             >
-                                <span>Batafsil</span>{" "}
+                                <span>Buyurtma berish</span>{" "}
                                 <svg
                                     viewBox="0 0 24 24"
                                     height="1em"
@@ -57,7 +58,9 @@ const Services = () => {
                             </picture>
                         </figure>
                     </div>
-                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full md:w-1/3">
+                    </a>
+                    <a href="#delivery" className="w-full md:w-1/3">
+                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full ">
                         <p className="text-sm text-black mb-3">Qassoblik hizmati</p>
                         <div className="relative z-20">
                             <h4 className="font-semibold text-2xl font-heading mb-9 text-black">
@@ -67,7 +70,7 @@ const Services = () => {
                                 className="flex items-center gap-2 text-lg text-primary uppercase"
                                 tabIndex={0}
                             >
-                                <span>Batafsil</span>{" "}
+                                <span>Buyurtma berish</span>{" "}
                                 <svg
                                     viewBox="0 0 24 24"
                                     height="1em"
@@ -102,7 +105,9 @@ const Services = () => {
                             </picture>
                         </figure>
                     </div>
-                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full md:w-1/3">
+                    </a>
+                    <a href="#delivery" className="w-full md:w-1/3">
+                    <div className="relative overflow-hidden rounded-xl aspect-square border bg-[#fff] border-[#8d0b0d] lg:aspect-square lg:px-9 lg:py-8 md:aspect-[4/3] p-6 shadow-practicum sm:aspect-square text-black xs:aspect-video w-full ">
                         <p className="text-sm text-black mb-3">Qushxona.uz</p>
                         <div className="relative z-20">
                             <h4 className="font-semibold text-2xl font-heading mb-9 text-black">
@@ -112,7 +117,7 @@ const Services = () => {
                                 className="flex items-center gap-2 text-lg text-primary uppercase"
                                 tabIndex={0}
                             >
-                                <span>Batafsil</span>{" "}
+                                <span>Buyurtma berish</span>{" "}
                                 <svg
                                     viewBox="0 0 24 24"
                                     height="1em"
@@ -147,8 +152,7 @@ const Services = () => {
                             </picture>
                         </figure>
                     </div>
-
-
+                    </a>
                 </div>
             </div>
         </section>
