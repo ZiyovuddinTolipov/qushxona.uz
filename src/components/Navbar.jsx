@@ -16,7 +16,7 @@ export default function NavBar() {
 
     return (
         <nav 
-            className={`sticky top-0 z-50 h-[10svh] ${hasShadow ? 'nav-shadow' : ''} navbar`} 
+            className={`sticky top-0 z-50 h-[10svh] ${hasShadow ? 'nav-shadow' : ''} navbar border-b border-b-gray-950`} 
             id="navbar"
         >
             <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row md:justify-between md:items-center rounded-xl">
@@ -32,14 +32,14 @@ export default function NavBar() {
                     </a>
                 </div>
 
-                <ul className="flex justify-around text-base md:text-xl font-medium uppercase bg-[#F9F0E7] border-t border-[#8d0b0d] md:border-t-0 text-[#8d0b0d]">
-                    <li className="px-2 md:px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d]">
+                <ul className="flex justify-around text-base md:text-xl font-medium uppercase bg-[#F9F0E7] border-t border-[#8d0b0d] md:border-t-0 text-[#8d0b0d] border-b md:border-b-[0]">
+                    <li className="text-center md:px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d] w-1/3">
                         <a href="#service" className="nav-links">Xizmatlarimiz</a>
                     </li>
-                    <li className="px-2 md:px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d]">
+                    <li className="text-center md:px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d] w-1/3">
                         <a href="#delivery" className="nav-links">Buyurtma</a>
                     </li>
-                    <li className="px-2 md:px-5 py-3">
+                    <li className="text-center md:px-5 py-3 w-1/3">
                         <a href="#contact" className="nav-links">Bog'lanish</a>
                     </li>
                 </ul>

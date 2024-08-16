@@ -21,7 +21,7 @@ const Head = () => {
 
   return (
     <section
-      className="h-auto md:h-[90svh] text-gray-950 head-section relative pt-10 bg-[#F9F0E7] overflow-hidden"
+      className="h-auto md:h-[90svh] text-gray-950 head-section relative pt-10 bg-[#F9F0E7] overflow-hidden "
       id="about"
     >
       <div className="content mx-auto max-w-[1200px] min-h-[70svh] md:h-[100svh] flex flex-row relative px-5">
@@ -44,7 +44,7 @@ const Head = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-1/2">
-          <video className="max-h-[400px] h-full w-[300px]" controls>
+          <video className="max-h-[400px] h-full w-[300px]" controls playsInline controlsList="nodownload nofullscreen">
             <source src={getVideoSource()} type="video/mp4" />
             <track
               kind="captions"
