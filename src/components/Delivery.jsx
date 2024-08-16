@@ -9,8 +9,8 @@ const Delivery = () => {
     const [additional, setAdditional] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const botToken = import.meta.env.VITE_BOT_TOKEN;
-    const chatId = import.meta.env.VITE_CHAT_ID;
+    const botToken = "7274256076:AAGY9c8W8qzWY7lVrGEuNwjb2YFy-EzOmx8";
+    const chatId = "-1002178285365";
 
     const handleSubmit = async (e) => {
         e.preventDefault();

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { FaInstagram, FaTelegramPlane, FaWhatsapp, FaYoutube } from "react-icons/fa"
+import { FaInstagram, FaTelegramPlane, FaYoutube } from "react-icons/fa"
 import { CiMail } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { PiTelegramLogoThin } from "react-icons/pi";
