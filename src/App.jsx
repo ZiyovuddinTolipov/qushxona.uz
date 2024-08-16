@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import { useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Analytics } from "@vercel/analytics/react"
+import Kavsar from './components/Kavsar';
 // import Scroll from './components/Scroll'
 const App = () => {
   useEffect(() => {
@@ -19,8 +20,9 @@ const App = () => {
       <Toaster position="top-right" reverseOrder={false} />
       <Navbar />
       <Head />
+      <Kavsar />
       <Services />
-      <Delivery page="#3" />
+      <Delivery  />
       <Contact />
       <Footer />
       <Analytics />
