@@ -32,7 +32,7 @@ const Calculator = () => {
 
                 <input
                     type="text"
-                    value={weight+" * 130000 ="+price + " so'm"}
+                    value={price + " so'm"}
                     readOnly
                     placeholder="Narxini ko'rsating"
                     className="px-5 py-3 w-full border rounded bg-white max-w-sm"
