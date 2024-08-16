@@ -17,7 +17,7 @@ const Calculator = () => {
 
     return (
         <div className="bg-[#F9F0E7] text-center py-6">
-            <div className=" p-5 mb-6 rounded flex">
+            <div className=" p-5 mb-6 rounded flex justify-center">
                 <input
                     type="number"
                     value={weight}
@@ -26,7 +26,7 @@ const Calculator = () => {
                         calculatePrice(e.target.value);
                     }}
                     placeholder="Go'shtning kilosini kiriting"
-                    className="px-5 py-3 w-full border rounded max-w-md"
+                    className="px-5 py-3 w-full border rounded max-w-sm"
                     min="0"
                 />
 
@@ -35,7 +35,7 @@ const Calculator = () => {
                     value={price + " so'm"}
                     readOnly
                     placeholder="Narxini ko'rsating"
-                    className="px-5 py-3 w-full border rounded bg-white"
+                    className="px-5 py-3 w-full border rounded bg-white max-w-sm"
                     disabled
                 />
             </div>
