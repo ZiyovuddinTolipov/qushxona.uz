@@ -76,12 +76,12 @@ h4 {
     border-color: blue;
   }
   &:nth-child(2) {
-    color: red;
-    border-color: red;
+    color: rgb(253, 108, 108);
+    border-color: rgb(244, 65, 65);
   }
   &:nth-child(3) {
-    color: green;
-    border-color: green;
+    color: red;
+    border-color: red;
   }
   &:hover {
     transition: all ease-in 0.2s;

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { FaInstagram, FaTelegramPlane, FaWhatsapp } from "react-icons/fa"
+import { FaInstagram, FaTelegramPlane, FaWhatsapp, FaYoutube } from "react-icons/fa"
 import { CiMail } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { PiTelegramLogoThin } from "react-icons/pi";
@@ -24,7 +24,7 @@ const Contact = () => {
                             <div className="flex gap-x-2 mt-2 flex-col gap-y-3 w-2/3">
                                 <a href="https://t.me/qushxonauzb/" className="social-icons text-xs md:text-[.9rem] px-2 py-2 rounded-md" data-aos="zoom-in" data-aos-duration="700" title="Qushxona.uz telegram sahifasi"><FaTelegramPlane /> Telegram</a>
                                 <a href="https://www.instagram.com/qushxona.uz/" className="social-icons text-xs md:text-[.9rem] px-2 py-2 rounded-md" data-aos="zoom-in" data-aos-duration="700" title="Qushxona.uz instagram sahifasi"><FaInstagram /> Instagram</a>
-                                <a href="https://wa.link/hokui2" className="social-icons text-xs md:text-[.9rem] px-2 py-2 rounded-md" data-aos="zoom-in" data-aos-duration="700" title="Qushxona.uz whatsapp sahifasi"><FaWhatsapp /> Whatsapp</a>
+                                <a href="https://youtube.com/@qushxonauz" className="social-icons text-xs md:text-[.9rem] px-2 py-2 rounded-md" data-aos="zoom-in" data-aos-duration="700" title="Qushxona.uz Youtube sahifasi"><FaYoutube /> YouTube</a>
                             </div>
                             <div className="w-full flex justify-end">
                                 <img src={qassobLogo} alt="" className="h-full max-h-[150px]" />

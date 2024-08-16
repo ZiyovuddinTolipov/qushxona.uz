@@ -31,10 +31,10 @@ const Head = () => {
             data-aos="fade-right"
             data-aos-duration="900"
           >
-            <h2 className="text-2xl" data-aos="fade-right">
+            <h2 className="md:text-4xl text-2xl" data-aos="fade-right">
               Qurbonlik xizmati.
             </h2>
-            <ul className="mt-5 text-xl">
+            <ul className="mt-5 text-xl md:text-2xl">
               {services.map((service, index) => (
                 <li key={index}>
                   <CiCircleCheck className="inline" /> {service}
