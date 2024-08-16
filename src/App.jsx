@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Analytics } from "@vercel/analytics/react"
 import Kavsar from './components/Kavsar';
+import Calculator from './components/Calculator';
 // import Scroll from './components/Scroll'
 const App = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const App = () => {
       <Head />
       <Kavsar />
       <Services />
+      <Calculator />
       <Delivery  />
       <Contact />
       <Footer />
