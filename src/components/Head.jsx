@@ -44,7 +44,7 @@ const Head = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-1/2">
-          <video className="max-h-[400px] h-full w-[300px]" controls playsInline controlsList="nodownload nofullscreen">
+          <video className="max-h-[400px] h-full w-[300px]" controls playsInline controlsList="nodownload nofullscreen" autoPlay muted>
             <source src={getVideoSource()} type="video/mp4" />
             <track
               kind="captions"

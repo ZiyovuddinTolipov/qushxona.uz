@@ -86,7 +86,7 @@ const Delivery = () => {
                         </div>
                         <button
                             type="submit"
-                            className={`px-2 py-2 mt-5 md:mt-0 max-w-sm w-full ${isSubmitted ? 'bg-green-500' : 'bg-white text-black'}`}
+                            className={`px-2 py-2 mt-5 md:mt-0 max-w-sm w-full ${isSubmitted ? 'bg-green-500' : 'bg-green-500 text-white font-semibold'}`}
                             disabled={isSubmitted}
                         >
                             {isSubmitted ? 'Yuborildi' : 'Yuborish'}
