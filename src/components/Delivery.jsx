@@ -7,12 +7,14 @@ const Delivery = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [additional, setAdditional] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const botToken = import.meta.env.VITE_BOT_TOKEN;
+    const chatId = import.meta.env.VITE_CHAT_ID;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const botToken = '7274256076:AAGY9c8W8qzWY7lVrGEuNwjb2YFy-EzOmx8'; // Your bot token
-        const chatId = '-1002178285365'; // Your chat ID
         const message = `Ism: ${name}\nTelefon: ${phone}\nQo'shimcha: ${additional}`;
 
         try {
@@ -26,66 +28,81 @@ const Delivery = () => {
                     text: message
                 }),
             });
+
             if (response.ok) {
                 toast.success('Ma\'lumotlar yuborildi!');
-                // Reset form
-                setName('');
-                setPhone('');
-                setAdditional('');
+                setIsSubmitted(true);
             } else {
                 toast.error('Ma\'lumotlarni yuborishda xatolik yuz berdi.');
             }
         } catch (error) {
-            toast.error('Ma\'lumotlarni yuborishda xatolik yuz berdi.');
+            toast.error('Internet bilan bog\'liq muammo yuzaga keldi.');
         }
     };
 
     return (
-        <div className="h-auto md:h-40 bg-slate-900 text-white mt-10 md:mt-0 p-5 md:p-0 overflow-x-hidden max-w-full" id="delivery">
-            <div className="mx-auto max-w-[1200px] pt-5">
-                <h2 className='text-xl my-3'>Ariza qoldiring biz sizga bog&apos;lanamiz</h2>
-                <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:items-end items-start w-[100%]">
-                    <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
-                        <label htmlFor="name" className="text-white max-w-sm">Ismingiz</label>
-                        <input
-                            id="name" // Added id attribute
-                            type="text"
-                            className="focus:outline-none px-3 py-2"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required
-                        />
+        <div className="h-auto md:h-64 bg-slate-900 text-white mt-10 md:mt-0 p-5 md:p-0 overflow-x-hidden max-w-full  overflow-y-hidden" id="delivery">
+            <div className="mx-auto max-w-[1200px] pt-5 min-h-[400px] ">
+                <h2 className='text-2xl my-3'>{isSubmitted ? "Ariza qoldirganingiz uchun rahmat . Biz sizga 24 soat ichida bog‘lanamiz." : "Ariza qoldiring biz sizga bog'lanamiz"}</h2>
+                {!isSubmitted && (
+                    <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:items-end items-start w-[100%]">
+                        <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
+                            <label htmlFor="name" className="text-white max-w-sm">Ismingiz</label>
+                            <input
+                                id="name"
+                                type="text"
+                                aria-label="Ismingiz"
+                                className="focus:outline-none px-3 py-2"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                required
+                                disabled={isSubmitted}
+                            />
+                        </div>
+                        <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
+                            <label htmlFor="phone" className="text-white max-w-sm">Telefon raqamingiz</label>
+                            <InputMask
+                                id="phone"
+                                aria-label="Telefon raqamingiz"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                className="focus:outline-none px-3 py-2"
+                                mask="+\9\9\8999999999"
+                                required
+                                disabled={isSubmitted}
+                            />
+                        </div>
+                        <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
+                            <label htmlFor="additional" className="text-white max-w-sm">Qo&apos;shimcha</label>
+                            <input
+                                id="additional"
+                                type="text"
+                                aria-label="Qo'shimcha ma'lumot"
+                                className="focus:outline-none px-3 py-2"
+                                value={additional}
+                                onChange={(e) => setAdditional(e.target.value)}
+                                disabled={isSubmitted}
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            className={`px-2 py-2 mt-5 md:mt-0 max-w-sm w-full ${isSubmitted ? 'bg-green-500' : 'bg-white text-black'}`}
+                            disabled={isSubmitted}
+                        >
+                            {isSubmitted ? 'Yuborildi' : 'Yuborish'}
+                        </button>
+                    </form>
+                )}
+                {isSubmitted && (
+                    <div className="success-checkmark mt-5">
+                        <div className="check-icon">
+                            <span className="icon-line line-tip"></span>
+                            <span className="icon-line line-long"></span>
+                            <div className="icon-circle"></div>
+                            <div className="icon-fix"></div>
+                        </div>
                     </div>
-                    <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
-                        <label htmlFor="phone" className="text-white max-w-sm">Telefon raqamingiz</label>
-                        <InputMask
-                            id="phone" // Ensure the id is present
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            className="focus:outline-none px-3 py-2"
-                            mask="+\9\9\8999999999"
-                            required
-                        />
-                    </div>
-                    <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
-                        <label htmlFor="additional" className="text-white max-w-sm">Qo&apos;shimcha</label>
-                        <input
-                            id="additional" // Ensure the id is present
-                            type="text"
-                            className="focus:outline-none px-3 py-2"
-                            value={additional}
-                            onChange={(e) => setAdditional(e.target.value)}
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        className="bg-white text-black px-2 py-2 mt-5 md:mt-0"
-                        data-aos="zoom-in"
-                        data-aos-duration="900"
-                    >
-                        Yuborish
-                    </button>
-                </form>
+                )}
             </div>
         </div>
     );
