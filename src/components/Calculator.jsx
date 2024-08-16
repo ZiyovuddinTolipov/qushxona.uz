@@ -4,7 +4,7 @@ const Calculator = () => {
     const [weight, setWeight] = useState('35');
     const [price, setPrice] = useState('3815000.00');
 
-    const pricePerKg = 109000; // 1 kilogramm uchun narx (masalan, 10,000 so'm)
+    const pricePerKg = 130000; // 1 kilogramm uchun narx (masalan, 10,000 so'm)
 
     const calculatePrice = (kg) => {
         const numericKg = parseFloat(kg);
@@ -32,7 +32,7 @@ const Calculator = () => {
 
                 <input
                     type="text"
-                    value={price + " so'm"}
+                    value={weight+" * 130000 ="+price + " so'm"}
                     readOnly
                     placeholder="Narxini ko'rsating"
                     className="px-5 py-3 w-full border rounded bg-white max-w-sm"
