@@ -1,7 +1,7 @@
 
 const Kavsar = () => {
     return (
-        <div className="py-5 bg-gray-950 text-[#F9F0E7]">
+        <div className="py-8 bg-gray-950 text-[#F9F0E7]">
             <div className="flex flex-col md:flex-row max-w-[1200px] mx-auto px-5 md:px-0">
                 <div className="leading-10 w-full md:w-1/2 ">
                     <p className="oyat text-4xl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
