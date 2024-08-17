@@ -90,7 +90,7 @@ const Delivery = () => {
                                 required
                                 disabled={isSubmitted || loading}
                             >
-                                <option value="" disabled selected >Marosimdi tanlash</option>
+                                <option value="" disabled selected >Marosim turini tanlash</option>
                                 <option value="Aqiqa">Aqiqa</option>
                                 <option value="Maraka">Maraka</option>
                                 <option value="To'y">To'y</option>
