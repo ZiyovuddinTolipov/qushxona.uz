@@ -95,6 +95,7 @@ const Delivery = () => {
                                 <option value="Maraka">Maraka</option>
                                 <option value="To'y">To'y</option>
                                 <option value="Qurbonlik">Qurbonlik</option>
+                                <option value="Qassoblik Xizmati">Qassoblik Xizmati</option>
                             </select>
                         </div>
                         <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
