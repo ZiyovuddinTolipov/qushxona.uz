@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-nonoctal-decimal-escape */
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
