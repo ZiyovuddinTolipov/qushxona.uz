@@ -12,8 +12,8 @@ const Delivery = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const botToken = "YOUR_BOT_TOKEN";
-    const chatId = "YOUR_CHAT_ID";
+    const botToken = "7274256076:AAGY9c8W8qzWY7lVrGEuNwjb2YFy-EzOmx8";
+    const chatId = "-1002178285365";
 
     const handleSubmit = async (e) => {
         e.preventDefault();
