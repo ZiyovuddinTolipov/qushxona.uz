@@ -7,15 +7,18 @@ const Delivery = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [additional, setAdditional] = useState('');
+    const [eventType, setEventType] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    const botToken = "7274256076:AAGY9c8W8qzWY7lVrGEuNwjb2YFy-EzOmx8";
-    const chatId = "-1002178285365";
+    const botToken = "YOUR_BOT_TOKEN";
+    const chatId = "YOUR_CHAT_ID";
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
 
-        const message = `Ism: ${name}\nTelefon: ${phone}\nQo'shimcha: ${additional}`;
+        const message = `Ism: ${name}\nTelefon: ${phone}\nMarosim: ${eventType}\nQo'shimcha: ${additional}`;
 
         try {
             const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
@@ -25,7 +28,7 @@ const Delivery = () => {
                 },
                 body: JSON.stringify({
                     chat_id: chatId,
-                    text: message
+                    text: message,
                 }),
             });
 
@@ -37,13 +40,15 @@ const Delivery = () => {
             }
         } catch (error) {
             toast.error('Internet bilan bog\'liq muammo yuzaga keldi.');
+        } finally {
+            setLoading(false);
         }
     };
 
     return (
         <div className="h-auto md:h-64 bg-slate-900 text-white mt-10 md:mt-0 p-5 md:p-0 overflow-x-hidden max-w-full  overflow-y-hidden" id="delivery">
             <div className="mx-auto max-w-[1200px] pt-5 min-h-[400px] ">
-                <h2 className='text-2xl my-3'>{isSubmitted ? "Ariza qoldirganingiz uchun rahmat . Biz sizga 24 soat ichida bog‘lanamiz." : "Ariza qoldiring biz sizga bog'lanamiz"}</h2>
+                <h2 className='text-2xl my-3'>{isSubmitted ? "Ariza qoldirganingiz uchun rahmat. Biz sizga 24 soat ichida bog‘lanamiz." : "Ariza qoldiring biz sizga bog'lanamiz"}</h2>
                 {!isSubmitted && (
                     <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:items-end items-start w-[100%]">
                         <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
@@ -56,7 +61,8 @@ const Delivery = () => {
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 required
-                                disabled={isSubmitted}
+                                disabled={isSubmitted || loading}
+                                placeholder='Ismingizni kiriting'
                             />
                         </div>
                         <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
@@ -69,8 +75,26 @@ const Delivery = () => {
                                 className="focus:outline-none px-3 py-2"
                                 mask="+\9\9\8999999999"
                                 required
-                                disabled={isSubmitted}
+                                disabled={isSubmitted || loading}
+                                placeholder='Telefon raqam'
                             />
+                        </div>
+                        <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
+                            <label htmlFor="marosim" className="text-white max-w-sm">Qanday marosim uchun?</label>
+                            <select
+                                id="marosim"
+                                value={eventType}
+                                onChange={(e) => setEventType(e.target.value)}
+                                className="focus:outline-none px-3 py-2 rounded-sm"
+                                required
+                                disabled={isSubmitted || loading}
+                            >
+                                <option value="" disabled selected >Marosimdi tanlash</option>
+                                <option value="Aqiqa">Aqiqa</option>
+                                <option value="Maraka">Maraka</option>
+                                <option value="To'y">To'y</option>
+                                <option value="Qurbonlik">Qurbonlik</option>
+                            </select>
                         </div>
                         <div className="flex flex-col w-full max-w-sm text-black gap-y-1" data-aos="zoom-in" data-aos-duration="900">
                             <label htmlFor="additional" className="text-white max-w-sm">Qo&apos;shimcha</label>
@@ -78,18 +102,19 @@ const Delivery = () => {
                                 id="additional"
                                 type="text"
                                 aria-label="Qo'shimcha ma'lumot"
+                                placeholder='Izoh'
                                 className="focus:outline-none px-3 py-2"
                                 value={additional}
                                 onChange={(e) => setAdditional(e.target.value)}
-                                disabled={isSubmitted}
+                                disabled={isSubmitted || loading}
                             />
                         </div>
                         <button
                             type="submit"
-                            className={`px-2 py-2 mt-5 md:mt-0 max-w-sm w-full ${isSubmitted ? 'bg-green-500' : 'bg-green-500 text-white font-semibold'}`}
-                            disabled={isSubmitted}
+                            className={`px-2 py-2 mt-5 md:mt-0 max-w-sm w-full ${loading ? 'bg-gray-500' : 'bg-green-500 text-white font-semibold'}`}
+                            disabled={isSubmitted || loading}
                         >
-                            {isSubmitted ? 'Yuborildi' : 'Yuborish'}
+                            {loading ? 'Yuborilmoqda...' : isSubmitted ? 'Yuborildi' : 'Yuborish'}
                         </button>
                     </form>
                 )}
