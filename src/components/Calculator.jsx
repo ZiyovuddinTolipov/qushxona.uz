@@ -5,7 +5,7 @@ const Calculator = () => {
     const [weight, setWeight] = useState('10');
     const [price, setPrice] = useState('1300000');
 
-    const pricePerKg = 130000; // 1 kilogramm uchun narx (masalan, 10,000 so'm)
+    const pricePerKg = 130000; 
 
     const calculatePrice = (kg) => {
         const numericKg = parseFloat(kg);
