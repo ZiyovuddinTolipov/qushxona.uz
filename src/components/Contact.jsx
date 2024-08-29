@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 
 import { FaInstagram, FaTelegramPlane, FaYoutube } from "react-icons/fa"
@@ -6,7 +7,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { PiTelegramLogoThin } from "react-icons/pi";
 import qassobLogo from '../assets/qassob2.svg'
 
-const Contact = () => {
+const Contact = ({ theme }) => {
     return (
         <section className="bg-secondary text-text relative p-5 md:p-0 pt-5" id="contact">
             <div className="mx-auto max-w-[1200px] h-auto md:h-[70svh] flex flex-col md:flex-row py-16 gap-5">
@@ -27,7 +28,11 @@ const Contact = () => {
                                 <a href="https://youtube.com/@qushxonauz" className="social-icons text-xs md:text-[.9rem] px-2 py-2 rounded-md bg-secondary hover:bg-primary hover:text-secondary transition-all duration-200 flex items-center" data-aos="zoom-in" data-aos-duration="700" title="Qushxona.uz Youtube sahifasi"><FaYoutube /> YouTube</a>
                             </div>
                             <div className="w-full flex justify-end">
-                                <img src={qassobLogo} alt="" className="h-full max-h-[150px] dark:filter dark:brightness-0 dark:invert" />
+                                <img 
+                                    src={qassobLogo} 
+                                    alt="Qassob Logo" 
+                                    className={`h-full max-h-[150px] ${theme === 'dark' ? 'filter brightness-0 invert' : ''}`} 
+                                />
                             </div>
                         </div>
                     </div>
