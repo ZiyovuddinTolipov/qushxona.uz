@@ -86,7 +86,7 @@ const Head = () => {
                 </li>
               ))}
             </ul>
-            <a href="#delivery">
+            <a href="#delivery" className='mt-4'>
               <button
                 className="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-dark transition duration-300 ease-in-out text-lg sm:text-xl"
                 data-aos="fade-up"
