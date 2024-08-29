@@ -1,48 +1,127 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import logo from '../assets/qassob.svg';
+import { FaSun, FaMoon, FaBars } from 'react-icons/fa';
 
-export default function NavBar() {
-    const [hasShadow, setHasShadow] = useState(false);
+gsap.registerPlugin(ScrollTrigger);
+
+export default function NavBar({ theme, toggleTheme }) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navbarRef = useRef(null);
+    const logoRef = useRef(null);
+    const menuItemsRef = useRef([]);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setHasShadow(window.scrollY > 0);
-        };
+        const navbar = navbarRef.current;
+        const logo = logoRef.current;
+        const menuItems = menuItemsRef.current;
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        gsap.fromTo(navbar,
+            { y: -100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }
+        );
+
+        gsap.fromTo(logo,
+            { scale: 0, rotation: -180 },
+            { scale: 1, rotation: 0, duration: 1, delay: 0.5, ease: 'elastic.out(1, 0.3)' }
+        );
+
+        menuItems.forEach((item, index) => {
+            gsap.fromTo(item,
+                { y: -50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, delay: 0.8 + index * 0.1, ease: 'power3.out' }
+            );
+        });
+
+        ScrollTrigger.create({
+            start: 'top -100',
+            end: 99999,
+            toggleClass: { className: 'navbar-scrolled', targets: navbar }
+        });
     }, []);
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <nav 
-            className={`sticky top-0 z-50 h-[10svh] ${hasShadow ? 'nav-shadow' : ''} navbar border-b border-b-gray-950`} 
+        <nav
+            ref={navbarRef}
+            className="sticky top-0 z-50 bg-secondary transition-all duration-300"
             id="navbar"
         >
-            <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row md:justify-between md:items-center rounded-xl">
-                <div className="w-full md:w-auto flex justify-center md:block">
-                    <a href="/" className="flex items-center text-2xl text-[#8d0b0d] font-semibold uppercase">
-                        <img 
-                            src={logo} 
-                            alt="Qushxona.uz - Qassoblik va Qurbonlik Xizmati Logosi" 
-                            className="h-16 nav-logo" 
-                            loading="lazy" 
-                        />
-                        <span>Qushxona.uz</span>
-                    </a>
-                </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-16">
+                    <div className="flex-shrink-0 flex items-center">
+                        <a href="/" className="flex items-center space-x-2">
+                            <img
+                                ref={logoRef}
+                                src={logo}
+                                alt="Qushxona.uz Logo"
+                                className={`h-8 w-auto ${theme === 'dark' ? 'filter brightness-0 invert' : ''}`}
+                            />
+                            <span className="font-bold text-lg text-primary hidden sm:inline">Qushxona.uz</span>
+                        </a>
+                    </div>
 
-                <ul className="flex justify-around text-base md:text-xl font-medium uppercase bg-[#F9F0E7] border-t border-[#8d0b0d] md:border-t-0 text-[#8d0b0d] border-b md:border-b-[0]">
-                    <li className="text-center md:px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d] w-1/3">
-                        <a href="#service" className="nav-links">Xizmatlarimiz</a>
-                    </li>
-                    <li className="text-center md:px-5 py-3 border-r-2 md:border-0 border-[#8d0b0d] w-1/3">
-                        <a href="#delivery" className="nav-links">Buyurtma</a>
-                    </li>
-                    <li className="text-center md:px-5 py-3 w-1/3">
-                        <a href="#contact" className="nav-links">Bog'lanish</a>
-                    </li>
-                </ul>
+                    <div className="hidden md:flex items-center space-x-4">
+                        {['Xizmatlarimiz', 'Buyurtma', 'Bog\'lanish'].map((item, index) => (
+                            <a
+                                key={item}
+                                href={`#${item.toLowerCase()}`}
+                                ref={el => menuItemsRef.current[index] = el}
+                                className="text-text hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                            >
+                                {item}
+                            </a>
+                        ))}
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-full bg-primary text-secondary hover:bg-opacity-80 transition-colors duration-200 mr-2"
+                            aria-label="Toggle theme"
+                        >
+                            {theme === 'light' ? <FaMoon /> : <FaSun />}
+                        </button>
+                    </div>
+
+                    <div className="md:hidden flex items-center">
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-full bg-primary text-secondary hover:bg-opacity-80 transition-colors duration-200 mr-2"
+                            aria-label="Toggle theme"
+                        >
+                            {theme === 'light' ? <FaMoon /> : <FaSun />}
+                        </button>
+                        <button
+                            onClick={toggleMenu}
+                            className="p-2 rounded-full bg-primary text-secondary hover:bg-opacity-80 transition-colors duration-200"
+                            aria-expanded={isMenuOpen}
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            <FaBars className="block h-4 w-4" aria-hidden="true" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}
+            >
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-secondary shadow-lg">
+                    {['Xizmatlarimiz', 'Buyurtma', 'Bog\'lanish'].map((item) => (
+                        <a
+                            key={item}
+                            href={`#${item.toLowerCase()}`}
+                            className="text-text hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                            onClick={toggleMenu}
+                        >
+                            {item}
+                        </a>
+                    ))}
+                </div>
             </div>
         </nav>
     );

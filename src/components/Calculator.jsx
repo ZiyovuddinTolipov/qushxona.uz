@@ -16,8 +16,8 @@ const Calculator = () => {
     };
 
     return (
-        <div className="bg-[#F9F0E7] text-center py-6">
-            <div className=" p-5 mb-6 rounded flex justify-center">
+        <div className="bg-secondary text-center py-6">
+            <div className="p-5 mb-6 rounded flex justify-center">
                 <input
                     type="number"
                     value={weight}
@@ -26,7 +26,7 @@ const Calculator = () => {
                         calculatePrice(e.target.value);
                     }}
                     placeholder="Go'shtning kilosini kiriting"
-                    className="px-5 py-3 w-full border rounded max-w-sm"
+                    className="px-5 py-3 w-full border rounded max-w-sm bg-background text-text"
                     min="0"
                 />
 
@@ -35,11 +35,11 @@ const Calculator = () => {
                     value={price + " so'm"}
                     readOnly
                     placeholder="Narxini ko'rsating"
-                    className="px-5 py-3 w-full border rounded bg-white max-w-sm"
+                    className="px-5 py-3 w-full border rounded bg-background text-text max-w-sm"
                     disabled
                 />
             </div>
-            <a href='#delivery' className='mt-3 bg-gray-950 text-white text-xl px-6 py-3 '>Buyurtma</a>
+            <a href='#delivery' className='mt-3 bg-primary text-secondary text-xl px-6 py-3'>Buyurtma</a>
         </div>
     );
 };
