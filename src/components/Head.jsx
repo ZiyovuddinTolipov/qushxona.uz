@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import {  useState, useRef } from 'react';
 import { CiCircleCheck } from "react-icons/ci";
 import { FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 import video480 from "../assets/head480.mp4";
